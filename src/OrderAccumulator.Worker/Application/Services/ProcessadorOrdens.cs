@@ -82,9 +82,7 @@ namespace OrderAccumulator.Worker.Application.Services
             }
 
             if (resultado.MotivoRejeicao == MotivoConflitoIdentificador)
-            {
                 return;
-            }
 
             _logger.LogWarning("Ordem {IdentificadorOrdem} rejeitada por limite.", ordem.Identificador);
         }

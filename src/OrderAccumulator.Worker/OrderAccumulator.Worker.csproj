@@ -6,9 +6,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="QuickFIXn.Core" />
+    <PackageReference Include="QuickFIXn.FIX44" GeneratePathProperty="true" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OrderManagement.Shared\OrderManagement.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\fix\acceptor.cfg" Link="fix\acceptor.cfg" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="$(PkgQuickFIXn_FIX44)\DataDictionary\FIX44.xml" Link="fix\FIX44.xml" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

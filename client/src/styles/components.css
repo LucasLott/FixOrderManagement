@@ -1,0 +1,399 @@
+.cartaoFormulario,
+.cartaoResultado {
+  border: 1px solid #e6ebe8;
+  border-radius: var(--raio-cartao);
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra-cartao);
+}
+
+.cartaoFormulario {
+  padding: 29px 32px 25px;
+}
+
+.cabecalhoCartao {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 26px;
+}
+
+.numeroEtapa {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: #edf4ef;
+  color: #5d846d;
+  font-family: var(--fonte-mono);
+  font-size: 12px;
+}
+
+.cabecalhoCartao .sobretitulo {
+  margin-bottom: 4px;
+  font-size: 9px;
+}
+
+.cabecalhoCartao h2 {
+  margin: 0;
+  color: var(--cor-escura);
+  font-family: var(--fonte-titulo);
+  font-size: 19px;
+  letter-spacing: -0.5px;
+}
+
+.gradeCampos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 17px;
+}
+
+.campo-formulario {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo-formulario__rotulo {
+  color: #45535b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.campo-formulario__entrada,
+.campo-formulario__selecao {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #dfe6e2;
+  border-radius: var(--raio-padrao);
+  outline: none;
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  font-size: 13px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.campo-formulario__entrada {
+  padding: 0 12px;
+}
+
+.campo-formulario__selecao {
+  padding: 0 34px 0 12px;
+}
+
+.campo-formulario__entrada::placeholder {
+  color: #a5afb0;
+}
+
+.campo-formulario__entrada:focus,
+.campo-formulario__selecao:focus {
+  border-color: #7ba18b;
+  box-shadow: 0 0 0 3px rgb(109 157 128 / 13%);
+}
+
+.campo-formulario__entrada[aria-invalid='true'],
+.campo-formulario__selecao[aria-invalid='true'] {
+  border-color: #c85e58;
+}
+
+.campo-monetario {
+  position: relative;
+}
+
+.campo-monetario > span {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #728078;
+  font-size: 12px;
+}
+
+.campo-monetario .campo-formulario__entrada {
+  padding-left: 39px;
+}
+
+.campo-formulario__dica,
+.campo-formulario__erro {
+  min-height: 13px;
+  font-size: 10px;
+}
+
+.campo-formulario__dica {
+  color: #8a9698;
+}
+
+.campo-formulario__erro {
+  color: var(--cor-erro);
+}
+
+.rodapeFormulario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--cor-borda-suave);
+}
+
+.rodapeFormulario p {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.botao {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: var(--raio-padrao);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background-color 140ms ease,
+    transform 140ms ease;
+}
+
+.botao--primario {
+  flex-shrink: 0;
+  background: var(--cor-escura);
+  color: var(--cor-superficie);
+}
+
+.botao--primario:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #203b44;
+}
+
+.botao--primario:focus-visible {
+  outline: 3px solid #8cb59c;
+  outline-offset: 3px;
+}
+
+.botao--primario:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.indicadorCarregamento {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgb(255 255 255 / 40%);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: girar 800ms linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avisoFormulario {
+  margin: 12px 0 0;
+  color: var(--cor-erro);
+  font-size: 11px;
+}
+
+.cartaoResultado {
+  flex: 1;
+  min-height: 250px;
+  padding: 25px 25px 23px;
+  border-top: 3px solid #dfe8e2;
+  box-shadow: 0 12px 35px rgb(32 54 46 / 3%);
+}
+
+.resultadoVazio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: radial-gradient(#e9eeeb 0.8px, transparent 0.8px);
+  background-position: right 14px top 14px;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+}
+
+.iconeResultado {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 19px;
+  border-radius: 50%;
+  background: #eff4f0;
+  color: #688b73;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.cartaoResultado .sobretitulo {
+  margin-bottom: 7px;
+  font-size: 9px;
+}
+
+.cartaoResultado h2 {
+  margin: 0 0 8px;
+  color: var(--cor-escura);
+  font-family: var(--fonte-titulo);
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.cartaoResultado > p:not(.sobretitulo) {
+  margin: 0;
+  color: #78858a;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.linhaStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-2);
+  margin-top: 20px;
+  color: #87938e;
+  font-family: var(--fonte-mono);
+  font-size: 9px;
+}
+
+.pontoStatus {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b9c5bf;
+}
+
+.resultadoAceita {
+  border-top-color: #71b58b;
+}
+
+.resultadoAceita .iconeResultado {
+  background: #eaf6ee;
+  color: #3a8b58;
+}
+
+.resultadoRejeitada {
+  border-top-color: #d4a85f;
+}
+
+.resultadoRejeitada .iconeResultado {
+  background: #fcf4e7;
+  color: #a77b31;
+}
+
+.resultadoFalha {
+  border-top-color: #c9766e;
+}
+
+.resultadoFalha .iconeResultado {
+  background: #fbeeed;
+  color: #b34f48;
+}
+
+.dadosResultado {
+  margin: 20px 0 0;
+  border-top: 1px solid var(--cor-borda-suave);
+}
+
+.dadoResultado {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--cor-borda-suave);
+}
+
+.dadoResultado dt,
+.dadoResultado > span {
+  color: var(--cor-texto-suave);
+  font-size: 9px;
+}
+
+.dadoResultado dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #273a42;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dadoResultado code {
+  color: #365e4b;
+  font-family: var(--fonte-mono);
+  font-size: 10px;
+}
+
+.motivoRejeicao dd {
+  color: #8b6b35;
+  font-weight: 500;
+}
+
+.listaErros {
+  margin: 12px 0 0;
+  padding-left: 17px;
+  color: #963d38;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.avisoResultado {
+  margin-top: 14px;
+  padding: 9px 10px;
+  border-radius: 4px;
+  background: #faf4e9;
+  color: #806a43;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.texto-acessivel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 760px) {
+  .cartaoFormulario {
+    padding: 25px 22px 21px;
+  }
+
+  .cartaoResultado {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 430px) {
+  .cartaoFormulario {
+    padding: 22px 17px 19px;
+  }
+
+  .gradeCampos {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .rodapeFormulario {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .botao--primario {
+    width: 100%;
+  }
+}

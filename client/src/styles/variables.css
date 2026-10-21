@@ -1,0 +1,28 @@
+:root {
+  --cor-escura: #10202b;
+  --cor-texto: #172735;
+  --cor-fundo: #f4f6f5;
+  --cor-superficie: #fff;
+  --cor-apagada: #75818a;
+  --cor-borda: #e4e9e7;
+  --cor-verde: #73d7a4;
+  --cor-primaria: #638f78;
+  --cor-erro: #b34440;
+  --cor-aviso: #806a43;
+  --cor-borda-suave: #edf0ee;
+  --cor-texto-suave: #87928f;
+  --fonte-corpo: 'DM Sans', sans-serif;
+  --fonte-titulo: Manrope, sans-serif;
+  --fonte-mono: 'DM Mono', monospace;
+  --espacamento-1: 4px;
+  --espacamento-2: 8px;
+  --espacamento-3: 12px;
+  --espacamento-4: 16px;
+  --espacamento-5: 24px;
+  --raio-pequeno: 4px;
+  --raio-padrao: 5px;
+  --raio-cartao: 8px;
+  --sombra-cartao: 0 12px 35px rgb(32 54 46 / 4%);
+  --foco: 0 0 0 3px rgb(109 157 128 / 13%);
+  --largura-conteudo: 1120px;
+}

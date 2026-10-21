@@ -1,0 +1,305 @@
+.pagina {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.cabecalho {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8e5;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--cor-texto);
+  font-family: var(--fonte-titulo);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.marcaDestaque {
+  color: var(--cor-primaria);
+}
+
+.marcaIcone {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px;
+  border-radius: var(--raio-cartao);
+  background: var(--cor-escura);
+}
+
+.marcaIcone span {
+  width: 3px;
+  border-radius: 3px;
+  background: var(--cor-verde);
+}
+
+.marcaIcone span:nth-child(1) {
+  height: 7px;
+}
+.marcaIcone span:nth-child(2) {
+  height: 12px;
+}
+.marcaIcone span:nth-child(3) {
+  height: 9px;
+}
+
+.seloAmbiente,
+.estadoApi {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacamento-2);
+  color: #66766f;
+  font-family: var(--fonte-mono);
+  font-size: 10px;
+  letter-spacing: 0.7px;
+}
+
+.seloAmbiente > span,
+.estadoApi > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #70ba8d;
+}
+
+.introducao {
+  min-height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 37px 0 30px;
+}
+
+.sobretitulo {
+  margin: 0 0 13px;
+  color: #718078;
+  font-family: var(--fonte-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+.introducao h1 {
+  margin: 0;
+  color: var(--cor-escura);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(40px, 5.2vw, 58px);
+  font-weight: 700;
+  letter-spacing: -3.5px;
+  line-height: 1.05;
+}
+
+.introducao h1 span {
+  color: #648472;
+}
+
+.textoIntroducao {
+  max-width: 430px;
+  margin: 17px 0 0;
+  color: #6c7a81;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.indicadorProtocolo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 23px 12px 0 0;
+  color: #233c40;
+}
+
+.indicadorLinha {
+  width: 54px;
+  height: 1px;
+  background: #a8c4b4;
+}
+
+.indicadorProtocolo strong,
+.indicadorProtocolo small {
+  display: block;
+}
+
+.indicadorProtocolo strong {
+  font-family: var(--fonte-titulo);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.indicadorProtocolo small {
+  margin-top: 2px;
+  color: #75867d;
+  font-family: var(--fonte-mono);
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.painelPrincipal {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.8fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.colunaResultado {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 0;
+}
+
+.tituloResultado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
+}
+
+.tituloResultado .sobretitulo {
+  margin: 0 0 13px;
+}
+
+.estadoApi {
+  margin: -11px 0 0;
+  padding: 5px 8px;
+  border: 1px solid #dfe9e2;
+  border-radius: 20px;
+  background: #f9fcfa;
+  color: #647c6d;
+  font-size: 9px;
+  letter-spacing: 0.3px;
+}
+
+.estadoApi > span {
+  width: 6px;
+  height: 6px;
+}
+
+.estadoEnviando > span {
+  background: #d39b48;
+  animation: pulsar 900ms ease-in-out infinite alternate;
+}
+
+@keyframes pulsar {
+  to {
+    opacity: 0.35;
+  }
+}
+
+.rodapePagina {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacamento-4);
+  margin-top: 25px;
+  color: #84908d;
+  font-size: 9px;
+}
+
+.rodapePagina span:first-child,
+.rodapePagina span:last-child {
+  font-family: var(--fonte-mono);
+  font-size: 8px;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 760px) {
+  .pagina {
+    width: min(100% - 36px, 580px);
+  }
+
+  .cabecalho {
+    height: 70px;
+  }
+
+  .seloAmbiente {
+    font-size: 8px;
+  }
+
+  .introducao {
+    min-height: auto;
+    padding: 51px 0 35px;
+  }
+
+  .introducao h1 {
+    font-size: clamp(39px, 9vw, 53px);
+  }
+
+  .indicadorProtocolo {
+    display: none;
+  }
+
+  .painelPrincipal {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .colunaResultado {
+    padding-top: 0;
+  }
+
+  .rodapePagina {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 13px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .pagina {
+    width: calc(100% - 28px);
+  }
+
+  .marca {
+    gap: var(--espacamento-2);
+    font-size: 12px;
+  }
+
+  .marcaIcone {
+    width: 25px;
+    height: 25px;
+  }
+
+  .seloAmbiente {
+    gap: 5px;
+    font-size: 7px;
+    letter-spacing: 0.2px;
+  }
+
+  .introducao {
+    padding-top: 42px;
+  }
+
+  .introducao h1 {
+    letter-spacing: -2.5px;
+  }
+
+  .textoIntroducao {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

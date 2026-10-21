@@ -22,12 +22,11 @@ namespace OrderGenerator.Api.Infrastructure.Fix
 
         public ClienteFix(ConversorOrdemFix conversor,
                           ILogger<ClienteFix> logger,
-                          IHostEnvironment ambiente,
                           IServiceProvider provedor)
         {
             _conversor = conversor;
             _logger = logger;
-            _pastaFix = Path.Combine(ambiente.ContentRootPath, "fix");
+            _pastaFix = Path.Combine(AppContext.BaseDirectory, "fix");
             _sessionID = new SessionID("FIX.4.4", "GENERATOR", "ACCUMULATOR");
             _provedor = provedor;
         }

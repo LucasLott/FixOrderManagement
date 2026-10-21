@@ -18,8 +18,4 @@
     <Content Include="$(PkgQuickFIXn_FIX44)\DataDictionary\FIX44.xml" Link="fix\FIX44.xml" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\OrderManagement.Shared\OrderManagement.Shared.csproj" />
-  </ItemGroup>
-
 </Project>
